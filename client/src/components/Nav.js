@@ -1,27 +1,32 @@
 import React from "react";
-import "../assets/css/Nav.css";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <h1>Google Books Search</h1>
-
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item one">
-            <a className="nav-link" href="/search">
-              Search
-            </a>
-          </li>
-          <li className="nav-item two">
-            <a className="nav-link" href="/saved">
-              Saved
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+          Google Books
+            </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/search"
+          className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+        >
+          Search
+            </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/saved"
+          className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+        >
+          Saved
+            </Link>
+      </li>
+    </ul>
   );
-}
+};
 
-export default Navbar;
+export default Nav;

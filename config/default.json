@@ -1,3 +1,3 @@
 {
-  "mongoURI": ""
+  "mongoURI": "mongodb+srv://user:userpass@cluster0.z7utu.mongodb.net/googlebooks?retryWrites=true&w=majority"
 }
